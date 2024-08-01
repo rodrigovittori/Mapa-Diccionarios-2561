@@ -1,6 +1,6 @@
 import time
 
-# M4.L3 - Actividad #3: "Bucle Principal"
+# M4.L3 - Actividad #4: "Transición"
 
 mapa = {
         #       CLAVE       :               VALOR
@@ -34,12 +34,16 @@ while(True): # To-do: agregar una condición para detener el bucle de juego
     time.sleep(2)
     continue
 
-  elif (nueva_habitacion == "Salida"):
-    print("¡Eres libre!")
-    time.sleep(2)
-    break
-
   else:
-    # Si la habitacion ES válida y NO es la salida:
-    habitacion_actual = nueva_habitacion
     
+    # Si la habitacion ES válida
+    if (nueva_habitacion == "Salida"):
+      print("¡Eres libre!")
+      time.sleep(2)
+      break
+
+    elif (nueva_habitacion == "Boss"):
+      print("¡Prepárate para la batalla final!")
+      time.sleep(2)
+
+    habitacion_actual = nueva_habitacion
